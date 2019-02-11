@@ -5,9 +5,9 @@
 # ARN 1-25-19
 
 
-from Environment import object, room
-from Extras import overlord
-from System import player, world
+import Environment
+import Extras
+import System
 
 
 def run_introduction():
@@ -28,31 +28,31 @@ def run_introduction():
 
 def construct(home):
     # base home construction
-    foyer = room.Room('foyer', home)
+    foyer = Environment.room.Room('foyer', home)
     game_world.add_room(foyer)
-    foyer.add_to_contents(object.Object('lamp', 'the lamp shines dimly'))
-    foyer.add_to_contents(object.Object('coat_rack', 'the rack stands firm'))
+    foyer.add_to_contents(Environment.object.Object('lamp', 'the lamp shines dimly'))
+    foyer.add_to_contents(Environment.object.Object('coat_rack', 'the rack stands firm'))
 
-    dining = room.Room('dining_room', foyer)
+    dining = Environment.room.Room('dining_room', foyer)
     game_world.add_room(dining)
-    dining.add_to_contents(object.Object('table', 'the table has food on it. the food is cold'))
-    dining.add_to_contents(object.Object('chair', 'made for sitting'))
-    dining.add_to_contents(object.Object('broken_chair', 'too much sitting'))
+    dining.add_to_contents(Environment.object.Object('table', 'the table has food on it. the food is cold'))
+    dining.add_to_contents(Environment.object.Object('chair', 'made for sitting'))
+    dining.add_to_contents(Environment.object.Object('broken_chair', 'too much sitting'))
 
-    hall = room.Room('hallway', foyer)
+    hall = Environment.room.Room('hallway', foyer)
     game_world.add_room(hall)
-    hall.add_to_contents(object.Object('closet', 'storage for coats and misc crap. you hear nothing inside'))
+    hall.add_to_contents(Environment.object.Object('closet', 'storage for coats and misc crap. you hear nothing inside'))
 
-    office = room.Room('office', foyer)
+    office = Environment.room.Room('office', foyer)
     game_world.add_room(office)
-    office.add_to_contents(object.Object('desk', 'power emanates from the desk'))
-    office.add_to_contents(object.Object('filing_cabinet', 'filled to the brim with documents. tax documents make up most of the papers'))
-    office.add_to_contents(object.Object('piano', 'you press a piano key. it is soft and sweet, but out of tune'))
+    office.add_to_contents(Environment.object.Object('desk', 'power emanates from the desk'))
+    office.add_to_contents(Environment.object.Object('filing_cabinet', 'filled to the brim with documents. tax documents make up most of the papers'))
+    office.add_to_contents(Environment.object.Object('piano', 'you press a piano key. it is soft and sweet, but out of tune'))
 
-    kitchen = room.Room('kitchen', hall)
+    kitchen = Environment.room.Room('kitchen', hall)
     game_world.add_room(kitchen)
-    kitchen.add_to_contents(object.Object('table', 'a small table, scratched by years of use'))
-    kitchen.add_to_contents(object.Object('countertop', 'the countertop is lightly covered by dust, dishes, and old mail'))
+    kitchen.add_to_contents(Environment.object.Object('table', 'a small table, scratched by years of use'))
+    kitchen.add_to_contents(Environment.object.Object('countertop', 'the countertop is lightly covered by dust, dishes, and old mail'))
 
     kitchen.add_connected_room(dining)
     kitchen.add_connected_room(office)
@@ -60,27 +60,27 @@ def construct(home):
     dining.add_connected_room(kitchen)
     office.add_connected_room(kitchen)
 
-    upstairs = room.Room('upstairs', foyer)
+    upstairs = Environment.room.Room('upstairs', foyer)
     game_world.add_room(upstairs)
 
-    downstairs = room.Room('downstairs', kitchen)
+    downstairs = Environment.room.Room('downstairs', kitchen)
     game_world.add_room(downstairs)
 
-    basement = room.Room('basement', downstairs)
+    basement = Environment.room.Room('basement', downstairs)
     game_world.add_room(basement)
 
 
 if __name__ == '__main__':
     # create home and game world
-    root_home = room.Room('home', None)
-    game_world = world.World(root_home)
+    root_home = Environment.room.Room('home', None)
+    game_world = System.world.World(root_home)
 
     # construct home
     construct(root_home)
 
     # create player and such
-    victim = player.Player(root_home, game_world)
-    god = overlord.Overlord(game_world)
+    victim = System.player.Player(root_home, game_world)
+    god = Extras.overlord.Overlord(game_world)
 
     # start game
     run_introduction()
