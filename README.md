@@ -1,3 +1,3 @@
 # rocking-horse
 
-<p>A game about coming home</p>
+<p>a game about coming home</p>
