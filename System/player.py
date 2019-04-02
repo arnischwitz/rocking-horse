@@ -26,7 +26,7 @@ class Player:
             print('that is not a command, enter a valid command')
 
         elif len(self.cmd_str) == 1:
-            if self.cmd_str[0] == 'command_list' or 'target_list' or 'quit':
+            if self.cmd_str[0] == 'command_list' or self.cmd_str[0] == 'target_list' or self.cmd_str[0] == 'quit':
                 cmd_to_call = getattr(self, self.cmd_str[0])
                 cmd_to_call()
             else:

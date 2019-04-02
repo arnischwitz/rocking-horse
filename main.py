@@ -4,7 +4,6 @@
 #
 # ARN 1-25-19
 
-
 from Environment import object, room
 from Extras import overlord
 from System import player, world
@@ -14,10 +13,10 @@ def run_introduction():
     print('\n\nWelcome to your new \\Home\n')
     print('I made this file system just for you\n\n')
 
-    print('These commands are available to you (bring up by typing >> commands)\n')
+    print('These commands are available to you (bring up by typing >> command_list)\n')
     print('help - look - what - move - create - destroy - quit\n\n')
 
-    print('These targets are available to you (bring up by typing >> targets)\n')
+    print('These targets are available to you (bring up by typing >> target_list)\n')
     print('room - object\n\n')
 
     print('Format as follows\n')
