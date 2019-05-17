@@ -1,0 +1,45 @@
+﻿  main.cpp
+d:\code\games\rockinghorse\rockinghorse\main.cpp(17): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+d:\code\games\rockinghorse\rockinghorse\main.cpp(17): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+d:\code\games\rockinghorse\rockinghorse\main.cpp(20): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+d:\code\games\rockinghorse\rockinghorse\main.cpp(20): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+d:\code\games\rockinghorse\rockinghorse\main.cpp(23): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+d:\code\games\rockinghorse\rockinghorse\main.cpp(23): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+  Object.cpp
+LINK : fatal error LNK1181: cannot open input file 'opengl.32.lib'
