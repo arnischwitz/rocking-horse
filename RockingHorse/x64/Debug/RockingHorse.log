@@ -1,2 +1,4 @@
-﻿  Object.cpp
-  RockingHorse.vcxproj -> D:\Code\Games\rocking-horse\x64\Debug\RockingHorse.exe
+﻿  Window.cpp
+d:\code\games\rocking-horse\rockinghorse\engine\graphicalinterface\window.cpp(60): error C2601: 'getMainWindow': local function definitions are illegal
+  d:\code\games\rocking-horse\rockinghorse\engine\graphicalinterface\window.cpp(9): note: this line contains a '{' which has not yet been matched
+d:\code\games\rocking-horse\rockinghorse\engine\graphicalinterface\window.cpp(61): error C2065: 'mainWindow': undeclared identifier

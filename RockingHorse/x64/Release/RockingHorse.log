@@ -1,6 +1,5 @@
-﻿  main.cpp
-  Object.cpp
-  Generating code
-  All 125 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  RockingHorse.vcxproj -> D:\Code\Games\rocking-horse\x64\Release\RockingHorse.exe
+﻿  Window.cpp
+d:\code\games\rocking-horse\rockinghorse\engine\graphicalinterface\window.cpp(14): error C2280: 'sf::RenderWindow::RenderWindow(const sf::RenderWindow &)': attempting to reference a deleted function
+  c:\sfml\sfml-2.5.1-windows-vc15-64-bit\sfml-2.5.1\include\sfml\graphics\renderwindow.hpp(180): note: compiler has generated 'sf::RenderWindow::RenderWindow' here
+  c:\sfml\sfml-2.5.1-windows-vc15-64-bit\sfml-2.5.1\include\sfml\graphics\renderwindow.hpp(180): note: 'sf::RenderWindow::RenderWindow(const sf::RenderWindow &)': function was implicitly deleted because a base class invokes a deleted or inaccessible function 'sf::Window::Window(const sf::Window &)'
+  c:\sfml\sfml-2.5.1-windows-vc15-64-bit\sfml-2.5.1\include\sfml\window\window.hpp(550): note: 'sf::Window::Window(const sf::Window &)': function was implicitly deleted because a base class invokes a deleted or inaccessible function 'sf::NonCopyable::NonCopyable(const sf::NonCopyable &)'

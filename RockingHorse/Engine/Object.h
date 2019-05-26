@@ -1,4 +1,4 @@
-// Object.hpp
+// Object.h
 //
 // base oop class header for in game actors
 //
@@ -13,16 +13,10 @@
 
 class Object {
 private:
-	// Object m_owner;
-	std::string m_description;
 
 public:
 	Object();
 
-	std::string getDescription()
-	{
-		return m_description;
-	}
 };
 
 #endif
